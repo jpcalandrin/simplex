@@ -2,8 +2,68 @@
 <html>
 <head>
   <title>Simplex</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Variáveis</h4>
+      </div>  
+    </div>
+    
+    <div class="var-dec">
+      <div class="row x1" data-v1="x1">
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label class="control-label">x1</label>
+            <input name="x1" type="text" class="form-control">
+          </div>
+        </div>
+        <div class='col-sm-2'>
+          <button data-v1='x1' class='btn btn-default mg'>Remover</button>
+        </div>
+      </div>
+      <div class="row x2" data-v1="x2">
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label class="control-label">x2</label>
+            <input name="x2" type="text" class="form-control">
+          </div>
+        </div>
+        <div class='col-sm-2'>
+          <button data-v1='x2' class='btn btn-default mg'>Remover</button>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <a id="add-var-dec" class="btn btn-default">Adicionar Variável</a>
+        </div>  
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Restrições</h4>
+      </div>  
+    </div>
+    <div class="add-res">
+      
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <a id="add-res" class="btn btn-default">Adicionar Restrição</a>
+        </div>  
+      </div>
+    </div>
+
+
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <%= javascript_include_tag 'simplex', cache: false %>
 </body>
 </html>

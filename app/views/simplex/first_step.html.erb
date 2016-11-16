@@ -1,0 +1,21 @@
+<div class="col-sm-2 col-sm-offset-2">
+  <form action="/simplex/second_step" method="post">
+    <div class="form-group">
+      <label for="var-qtd">Número de Variáveis</label>
+      <input name="var-qtd" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="res-qtd">Número de Restrições</label>
+      <input name="res-qtd" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label class="radio-inline">
+        <input type="radio" name="tipo" id="inlineRadio1" value="1"> Max
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="tipo" id="inlineRadio2" value="0"> Min
+      </label>
+    </div>
+    <button type="submit" class="btn btn-default pull-right">Próximo</button>
+  </form>
+</div>

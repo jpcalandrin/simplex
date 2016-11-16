@@ -1,0 +1,44 @@
+
+
+<h4>Variáveis</h4>
+<form action="/simplex/results" method="POST">
+  <% @var_qtd.times do |n| %>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="form-group">
+          <label class="control-label">x<%= n %></label>
+          <input name="func[<%= n %>]" type="text" class="form-control">
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
+  <h4>Restrições</h4>
+
+  <div class="col-sm-12">
+    <div class="form-inline">
+      <% @res_qtd.times do |n| %>
+        <div class="row res-row">
+          <div class="form-group">
+            <% @var_qtd.times do |n2| %>
+              <label for="r[<%= n %>][func][<%= n2 %>]">x<%= n2 %></label>
+              <input class="input-res" name="r[<%= n %>][func][<%= n2 %>]" type="text" class="form-control">
+            <% end %>
+            <select name="r[<%= n %>][tipo-b]" class="form-control">
+              <option value="maior">>=</option>
+              <option value="menor"><=</option>
+            </select>
+            <input class="input-res" name="r[<%= n %>][b]" type="text" class="form-control">
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-5">
+      <button type="submit" class="btn btn-default">Próximo</button>
+    </div>  
+  </div>
+</form>

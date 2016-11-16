@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   root 'simplex#simplex'
 
+  get 'simplex/first_step' => 'simplex#first_step'
+  match 'simplex/second_step' => 'simplex#second_step', via: [:get, :post]
+  match 'simplex/results' => 'simplex#results', via: [:get, :post]
+
   # Example resource route with options:
   #   resources :products do
   #     member do
