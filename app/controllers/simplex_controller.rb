@@ -13,7 +13,15 @@ class SimplexController < ApplicationController
   end
 
   def results
-    simplex = Simplex::Simplex.new(params['func'], params['r'], session[:tipo])
+    simplex = Simplex::Simplex.new(params['func'], params['x'], params['tb'], params['b'], session[:tipo])
+    @tabelas = []
+    aux = false
+    while aux == false
+      res = simplex.gerar_resultado
+      @tabelas << res.dup
+      aux = simplex.verifica_parada
+    end
   end
+
 
 end

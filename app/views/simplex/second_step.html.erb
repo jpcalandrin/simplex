@@ -22,14 +22,14 @@
         <div class="row res-row">
           <div class="form-group">
             <% @var_qtd.times do |n2| %>
-              <label for="r[<%= n %>][func][<%= n2 %>]">x<%= n2 %></label>
-              <input class="input-res" name="r[<%= n %>][func][<%= n2 %>]" type="text" class="form-control">
+              <label for="x[<%= n %>][]">x<%= n2 %></label>
+              <input class="input-res" name="x[<%= n %>][]" type="text" class="form-control">
             <% end %>
-            <select name="r[<%= n %>][tipo-b]" class="form-control">
-              <option value="maior">>=</option>
-              <option value="menor"><=</option>
+            <select name="tb[]" class="form-control">
+              <option value=">=">>=</option>
+              <option value="<="><=</option>
             </select>
-            <input class="input-res" name="r[<%= n %>][b]" type="text" class="form-control">
+            <input class="input-res" name="b[]" type="text" class="form-control">
           </div>
         </div>
       <% end %>

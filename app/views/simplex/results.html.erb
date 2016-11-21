@@ -1,0 +1,19 @@
+<% header = @tabelas.first.shift %>
+<% @tabelas.each_with_index do |tabela, idx| %>
+  <h4><%= idx + 1 %>ª Interação</h4>
+  <table class="table">
+    <tr>
+      <% header.each do |h| %>
+           <th><%= h %></th>
+      <% end %>
+    </tr>
+    <% tabela.each do |e| %>
+         <tr>
+           <% e.each do |i| %>
+             <td><%= i %></td>
+           <% end %>
+         </tr>
+    <% end %>
+  </table>
+
+<% end %>
