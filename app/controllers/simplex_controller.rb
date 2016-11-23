@@ -17,8 +17,12 @@ class SimplexController < ApplicationController
     @tabelas = []
     aux = false
     while aux == false
-      res = simplex.gerar_resultado
-      @tabelas << res.dup
+      aux = simplex.gerar_resultado
+      res = []
+      aux.each do |row|
+        res << row.dup
+      end
+      @tabelas << res
       aux = simplex.verifica_parada
     end
   end

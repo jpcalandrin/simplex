@@ -1,5 +1,7 @@
-<% header = @tabelas.first.shift %>
+
+
 <% @tabelas.each_with_index do |tabela, idx| %>
+<% header = tabela.shift %>
   <h4><%= idx + 1 %>ª Interação</h4>
   <table class="table">
     <tr>
@@ -15,5 +17,12 @@
          </tr>
     <% end %>
   </table>
+<% end %>
 
+<h3>Resultado</h3>
+
+<% rows_res = @tabelas.last %>
+
+<% rows_res.each do |row| %>
+  <p><b><%= row.first %></b>: <%= row.last%></p>  
 <% end %>

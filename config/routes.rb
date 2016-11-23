@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  root 'simplex#simplex'
+  root 'simplex#first_step'
 
   get 'simplex/first_step' => 'simplex#first_step'
   match 'simplex/second_step' => 'simplex#second_step', via: [:get, :post]

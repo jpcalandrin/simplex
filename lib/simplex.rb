@@ -95,7 +95,7 @@ module Simplex
       ent = s_menor.keys
       ent << col1.count - 1
       ent.delete(col_idx_menor)
-      @tabela[col_idx_menor][0] = "x#{idx_menor}"
+      @tabela[col_idx_menor][0] = "x#{idx_menor - 1}"
       pivo = col1[col_idx_menor]
       line_sub = @tabela[col_idx_menor].dup
       var = line_sub.shift
