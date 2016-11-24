@@ -1,28 +1,70 @@
-== README
+# Simplex
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Abrir aplicação online - Simplex](https://simplex-001.herokuapp.com/)
 
-Things you may want to cover:
+**Trabalho P.O. de Pesquisa Operacional** - 6º semestre BCC
 
-* Ruby version
+### Integrantes
 
-* System dependencies
+1. João Pedro Calandrin Abreu, RA: 54160-5
+2. Fabricio Eduardo Omoto, RA: 53652-0
+3. Murilo Pellegrini Fernandes, RA: 53845-0
+4. Breno Andrade
 
-* Configuration
+## Introdução
+Aqui você terá uma visão sobre como funciona o Simplex.
+Será descrito aqui suas funcionalidades, seus problemas e limitações conhecidos.
+Também será descrito as demandas e os problemas resolvidos da versão atual.
 
-* Database creation
+Simplex é um metodo, um procedimento matricial usado para resolver os modelos de
+programação linear, visando a solução ótima para o problema.
 
-* Database initialization
+### Simplex
 
-* How to run the test suite
+* Entradas personalizadas para maximização e minimização;
+* Quantidade ilimitada de restrições e variáveis;
+* Quantidade especifica de iterações;
+* Tabela de sensibilidade;
+* Possibilidade de mostrar passo a passo ou somente o resultado final;
+* Tratamento de erros quanto à expressões erradas ou loop infinito.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Problemas conhecidos e limitações
 
-* Deployment instructions
+### Simplex
 
-* ...
+* As restrições só aceitam "<=" como operador;
+* É necessário separar os sinais matemáticos das variáveis com um espaço para não causar erro de interpretação (`e.g.: 3x1 + 2x2`).
 
+## Procedimento e alteração de configuração do ambiente
+Para alteração no ambiente é necessário possuir o Git e o Heroku Toolbelt, realizar login no Heroku e executar o comando `heroku create`. Após a configuração, basta dar um `push` no branch master. E.g.: `git push heroku master`.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Guia de uso do Simplex
+
+### Expressão
+Exemplo de expressão:
+
+* Max Z = 3x1 + 5x2
+* Min Z = -3x1 - 5x2
+
+### Restrições
+Utilize os botões de `+` e `-` para adicionar ou remover as restrições.
+
+Exemplos de restrições:
+
+* x1 <= 4
+* x2 <= 6
+* 3x1 + 2x2 <= 18
+
+### Apresentação do Resultado
+Selecione a forma de apresentação do resultado, todas as iterações ou somente a tabela com o resultado final.
+
+### Maximizar / Minimizar
+O resultado é apresentado após o calculo a solução ótima do problema de PL proposto.
+Se ao final do processo a solução não for ótima, é porque um dos pontos adjacentes fornece um valor
+maior que o inicial.
+
+### Análise de Sensibilidade
+A Análise de Sensibilidade é uma análise pós-otimização que busca verificar os efeitos causados
+ao PPL devido as possíveis variações (aumentando ou diminuindo) dos valores dos coeficientes das
+variáveis, tanto da função objetivo como nas restrições além das disponibilidades dos recursos
+mencionados nas restrições (termos constantes).
