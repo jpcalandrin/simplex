@@ -47,7 +47,7 @@ Exemplo de expressão:
 * Min Z = -3x1 - 5x2
 
 ### Restrições
-Utilize os botões de `+` e `-` para adicionar ou remover as restrições.
+Digite a quantidade no campo restrições para quantidade de estrições que deseja.
 
 Exemplos de restrições:
 
@@ -55,16 +55,7 @@ Exemplos de restrições:
 * x2 <= 6
 * 3x1 + 2x2 <= 18
 
-### Apresentação do Resultado
-Selecione a forma de apresentação do resultado, todas as iterações ou somente a tabela com o resultado final.
-
 ### Maximizar / Minimizar
 O resultado é apresentado após o calculo a solução ótima do problema de PL proposto.
 Se ao final do processo a solução não for ótima, é porque um dos pontos adjacentes fornece um valor
 maior que o inicial.
-
-### Análise de Sensibilidade
-A Análise de Sensibilidade é uma análise pós-otimização que busca verificar os efeitos causados
-ao PPL devido as possíveis variações (aumentando ou diminuindo) dos valores dos coeficientes das
-variáveis, tanto da função objetivo como nas restrições além das disponibilidades dos recursos
-mencionados nas restrições (termos constantes).
