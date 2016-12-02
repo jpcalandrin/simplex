@@ -32,7 +32,7 @@ programação linear, visando a solução ótima para o problema.
 Para alteração no ambiente é necessário possuir o Git e o Heroku Toolbelt, realizar login no Heroku e executar o comando `heroku create`. Após a configuração, basta dar um `push` no branch master. E.g.: `git push heroku master`.
 
 ## Guia de uso do Simplex
-
+Digite a quantidade de varáveis e a quantidade de restrições desejadas, selecione Max para maximizar e Min se quiser minimizar. Após seguir, preencha os campos e prossiga.
 ### Expressão
 Max Z = 3.x1 + 5.x2
 
