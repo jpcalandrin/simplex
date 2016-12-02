@@ -28,43 +28,20 @@ programação linear, visando a solução ótima para o problema.
 * Possibilidade de mostrar passo a passo ou somente o resultado final;
 * Tratamento de erros quanto à expressões erradas ou loop infinito.
 
-## Problemas conhecidos e limitações
-
-### Simplex
-
-* As restrições só aceitam "<=" como operador;
-* É necessário separar os sinais matemáticos das variáveis com um espaço para não causar erro de interpretação (`e.g.: 3x1 + 2x2`).
-
 ## Procedimento e alteração de configuração do ambiente
 Para alteração no ambiente é necessário possuir o Git e o Heroku Toolbelt, realizar login no Heroku e executar o comando `heroku create`. Após a configuração, basta dar um `push` no branch master. E.g.: `git push heroku master`.
 
 ## Guia de uso do Simplex
 
 ### Expressão
-Exemplo de expressão:
+Max Z = 3.x1 + 5.x2
 
-* Max Z = 3x1 + 5x2
-* Min Z = -3x1 - 5x2
-
-### Restrições
-Utilize os botões de `+` e `-` para adicionar ou remover as restrições.
-
-Exemplos de restrições:
-
-* x1 <= 4
-* x2 <= 6
-* 3x1 + 2x2 <= 18
-
-### Apresentação do Resultado
-Selecione a forma de apresentação do resultado, todas as iterações ou somente a tabela com o resultado final.
+Restrições: 
+ x1 + f1 <=4 
+ x2 + f2 <=6 
+ 3x1 + 2x2 + f3 <=18 
 
 ### Maximizar / Minimizar
 O resultado é apresentado após o calculo a solução ótima do problema de PL proposto.
 Se ao final do processo a solução não for ótima, é porque um dos pontos adjacentes fornece um valor
 maior que o inicial.
-
-### Análise de Sensibilidade
-A Análise de Sensibilidade é uma análise pós-otimização que busca verificar os efeitos causados
-ao PPL devido as possíveis variações (aumentando ou diminuindo) dos valores dos coeficientes das
-variáveis, tanto da função objetivo como nas restrições além das disponibilidades dos recursos
-mencionados nas restrições (termos constantes).
